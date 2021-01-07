@@ -1,0 +1,35 @@
+<%- include("./includes/header.ejs"); %>
+<body>
+    <% if (tasks.length > 0) { %>
+          <div class="display-task">
+                <ul>
+                    <% for (let task of tasks) { %>
+                   <li>
+                       
+                       <div class="each-task">
+                          
+                           <div class="outer">
+                            <h2 class="inner"><%= task.title %></h2>
+                            
+                            <div class="buttons">
+                            <form class ="inner" action="/edit-task" method="POST">
+                                <button class="btn" type="submit">Edit</button>
+                                <input type="hidden" name="id" value="<%= task.id %>">
+                            </form>
+                            <form class="inner" action="/delete-task" method="POST">
+                             <button class="btn" id="delete-button" type="submit">Delete</button>
+                             <input type="hidden" name="id" value="<%= task.id %>">
+                         </form>
+                         </div>
+                         </div>
+                           <p><%= task.content %></p>
+                           
+                       </div>
+                   </li>
+                   <% } %>
+                </ul>
+            </div>
+            <% } else { %>
+                <h1 class="heading">No tasks are assigned</h1>
+            <% } %>
+</body>

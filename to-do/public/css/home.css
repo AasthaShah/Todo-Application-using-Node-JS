@@ -1,0 +1,121 @@
+body {
+    background-color: #443266;
+    font-size: large;
+    list-style-type: none;
+    font-family: 'Gotu', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #443266;
+}
+
+.main-heading {
+    height: 50px;
+    width: 100%;
+    line-height: 50px;
+    background-color: #F1F0FF;
+    color: #443266;
+}
+
+.header-list {
+list-style-type: none;
+color: white;
+display: flex;
+text-align: center;
+position: relative;
+
+}
+
+.header-item {
+    margin-right: 5%;
+    
+}
+.heading {
+    margin-left: 40%;
+    color: #C3C3E5;
+}
+
+.buttons {
+    float: right;
+    right: 150px;
+    position: absolute;
+}
+
+.display-task ul {
+    list-style-type: none;
+}
+
+.display-task {
+    height: max-content;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.each-task {
+    background-color: #C3C3E5;
+    border-radius: 20px;
+    border: 2px solid #F1F0FF;
+    margin-bottom: 5%;
+    list-style-type: none;
+    line-height: normal;
+}
+
+button {
+    background-color: transparent;
+    color : #443266;
+    height: max-content;
+    width: max-content;
+    font-size: larger;
+    padding : 1%;
+    border-radius: 10px;
+    display: flex;
+    border: transparent;
+    margin-right: 20px;
+    margin-left: 10px;
+    float: right;
+
+}
+.btn:hover {
+    background-color: transparent;
+    color:black;
+    border: transparent;
+    font-size: larger;
+}
+
+#add-task {
+    color: wheat;
+}
+
+#delete-button {
+    background-image: url('/images/delete.png');
+}
+
+.btn {
+    float: right;
+    text-align: right;
+    justify-content: flex-end;
+    
+}
+
+.each-task p {
+    padding: 1%;
+}
+
+.outer {
+    width: 100%;
+    padding: 1%;
+    display: flex;
+}
+
+.inner {
+    display: inline-block;
+}
+
+.outer button {
+    float: right;
+}
+
+.outer h1 {
+    float: left;
+}

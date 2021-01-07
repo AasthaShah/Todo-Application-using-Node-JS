@@ -1,0 +1,22 @@
+<%- include('./includes/header.ejs'); %>
+<% console.log('Inside edit-task.ejs'); %>
+
+<% for(task of tasks) {  console.log(task.id);  %> 
+    <% if(task.id == id) { console.log("item is matched"); %> 
+    <h1 class="add-task-heading">Edit task!</h1>
+<form class="task-form" action="/edit-submit" method="POST">
+    <div class="one">
+    <label for="title">Title</label>
+    <input type="text" name="title" value="<%= task.title %>">
+</div>
+<div class="two">
+    <label for="description">Content</label>
+    <input type="textarea" name="content" value="<%= task.content %>"> 
+    <input type="hidden" name="id" value="<%= task.id %>">
+    </div>
+    <div class="three">
+    <button class="btn" id="add-task" type="submit">Edit Task</button>
+    </div>
+</form>
+<% } %>
+<% } %>
